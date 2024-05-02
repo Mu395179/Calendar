@@ -54,7 +54,7 @@
     <?php
     // 先設日曆基本所需變數
     
-    $month = 5;
+    $month = 4;
     $year = date("Y");
     echo $year . "年";
     echo "<br>";

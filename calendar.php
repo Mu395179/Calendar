@@ -5,39 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calendar</title>
-<style>
-.block-table{
-    width: 380px;
-    display: flex;
-    flex-wrap: wrap;
+    <style>
+        body{
+            background-color: gray;
+        }
+        .block-table {
+            width: 380px;
+            display: flex;
+            flex-wrap: wrap;
 
-}
-.item{
-    margin-left: -1px;
-    margin-top: -1px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    position: relative;
-}
-.item-header{
-    margin-left: -1px;
-    margin-top: -1px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-weight: 800;
-    
-}
+        }
 
+        .item {
+            background-color: white;
+            margin-left: -1px;
+            margin-top: -1px;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            position: relative;
+        }
 
+        .item-header {
+            margin-left: -1px;
+            margin-top: -1px;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid yellow;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-weight: 800;
 
-</style>
+        }
+
+        .holiday {
+            background: pink;
+        }
+    </style>
 
 
 
@@ -69,22 +76,51 @@
 
 
     // 先設日期陣列，把迴圈所得的結果存入陣列，並應出來
-    $days=[];
+    $days = [];
     // 要製作一個6*7的css box 需要42個值
     for ($i = 0; $i < 42; $i++) {
         // 用迴圈的$i 與首周第一天的差值來訂定當月的日期
-        $diff=$i-$firstWeekStarDay;
+        $diff = $i - $firstWeekStarDay;
         // 把上述差值來當作每月第一天的加值，所以如果有負的則會出現上個月的日期
         // 同理，如果大於當月日期數，也會出現下個月的日期
-        $days[] = date("Y-m-d", strtotime("$diff days",$firstDay));
+        $days[] = date("Y-m-d", strtotime("$diff days", $firstDay));
     }
-
-
-
-
-
-
     ?>
+    <div class="block-table">
+        <div class="item-header">日</div>
+        <div class="item-header">一</div>
+        <div class="item-header">二</div>
+        <div class="item-header">三</div>
+        <div class="item-header">四</div>
+        <div class="item-header">五</div>
+        <div class="item-header">六</div>
+        <?php
+        // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
+        foreach ($days as $day) {
+            // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
+            // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
+            // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
+            // 那format就是陣列中的日期部分
+            $format = explode("-", $day)[2];
+            // 再來是找每個日期是星期幾，就直接取陣列$day的時間戳
+            $w = date("w", strtotime($day));
+            // 用if判斷式來區分平日跟假日
+            if ($w == 0 || $w == 6) {
+                echo "<div class='item holiday'>$format</div>";
+            } else {
+                echo "<div class='item'>";
+                echo "<div class='date'>$format</div>";
+                echo "</div>";
+            }
+
+
+
+        }
+        ?>
+    </div>
+
+
+
 </body>
 
 </html>

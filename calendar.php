@@ -5,6 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calendar</title>
+<style>
+.block-table{
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.item{
+    margin-left: -1px;
+    margin-top: -1px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+}
+.item-header{
+    margin-left: -1px;
+    margin-top: -1px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    
+}
+
+
+
+</style>
+
+
+
 </head>
 
 <body>

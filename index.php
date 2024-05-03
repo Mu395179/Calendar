@@ -7,7 +7,7 @@
   <title>calendar</title>
   <style>
     body {
-      background-color: gray;
+      background-color: lightgoldenrodyellow;
     }
 
     row {
@@ -16,7 +16,7 @@
 
     .container {
       position: absolute;
-      width: 1140px;
+      width: 1340px;
       height: 80vh;
     }
 
@@ -31,23 +31,31 @@
     }
 
     .block-table1 {
-      color: gray;
+
+      /* background-color: black; */
+      color: lightgoldenrodyellow;
       float: left;
 
       display: inline-block;
       position: relative;
-      width: 450px;
+      width: 323px;
       display: flex;
       flex-wrap: wrap;
 
     }
 
+    /* .block-table1>a{
+      color: red;
+      text-align: center;
+    } */
+
     .block-table3 {
+      background-color: black;
       float: left;
       color: gray;
       display: inline-block;
       position: relative;
-      width: 450px;
+      width: 400px;
       display: flex;
       flex-wrap: wrap;
 
@@ -82,11 +90,12 @@
       background: pink;
     }
 
-
     .box {
+      text-align: center;
       width: 1000px;
 
     }
+
 
     .prev-box {
       display: inline-block;
@@ -123,23 +132,23 @@
   // 如果不存在就會取此時此刻的年份來當作$month變數的值
   // 所以在沒按按鈕的狀況下，就會呈現打開網頁的此時此刻的年份與月份
   $year = $_GET['year'] ?? date("Y");
-  echo $year . "年";
-  echo "<br>";
-  echo $month . "月";
-  echo "<br>";
+  // echo $year . "年";
+  // echo "<br>";
+  // echo $month . "月";
+  // echo "<br>";
   // 先設當月第一天的時間戳變數
   $firstDay = strtotime(date("Y-$month-1"));
   // 設第一周的第一天
 // date(從時間戳取的參數"w"是星期幾,第一天的時間戳)
   $firstWeekStarDay = date("w", $firstDay);
-  echo "當周的第一天是星期" . $firstWeekStarDay;
+  // echo "當周的第一天是星期" . $firstWeekStarDay;
   // 當月總共有幾天，"t"是取時間戳的總天數
   $days = date("t", $firstDay);
   // 當月的最後一天變數時間戳
   $lastDay = strtotime(date("Y-$month-$days"));
-  echo "<br>";
+  // echo "<br>";
   // 從最後一天的時間戳，取當天日期
-  echo "最後一天是" . date("Y-m-d", $lastDay);
+  // echo "最後一天是" . date("Y-m-d", $lastDay);
 
 
   // 先設日期陣列，把迴圈所得的結果存入陣列，並應出來
@@ -173,6 +182,8 @@
   }
   ?>
   <!-- 用a link的方式給值給_GET陣列，並再由if判斷式做運算 -->
+
+
   <div class="box">
     <div class="prev-box">
       <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>">上一個月</a>
@@ -183,7 +194,8 @@
     </div>
   </div>
   <div class="container">
-    <div class="block-table1">123</div>
+    <div class="block-table1">123
+    </div>
     <div class="block-table">
       <div class="item-header">日</div>
       <div class="item-header">一</div>
@@ -216,7 +228,7 @@
       }
       ?>
     </div>
-    <div class="block-table3">123</div>
+    <!-- <div class="block-table3"><a href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>">下一個月</a></div> -->
   </div>
 
 

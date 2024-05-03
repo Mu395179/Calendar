@@ -89,8 +89,12 @@
     .holiday {
       background: pink;
     }
+    .otherday {
+      background: yellow;
+    }
 
     .box {
+      color: red;
       text-align: center;
       width: 1000px;
 
@@ -117,6 +121,7 @@
 </head>
 
 <body>
+  <li><a href="test.php">測試</a></li>
   <?php
   // 先設月份變數為_GET陣列，這樣之後做給值的網址就可以直接變成日期格式
   // $month=(isset($_GET['month']))?$_GET['month']:date("m");
@@ -205,23 +210,28 @@
       <div class="item-header">五</div>
       <div class="item-header">六</div>
       <?php
-      // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
-      foreach ($days as $day) {
-        // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
-        // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
-        // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
-        // 那format就是陣列中的日期部分
-        $format = explode("-", $day)[2];
-        // 再來是找每個日期是星期幾，就直接取陣列$day的時間戳
-        $w = date("w", strtotime($day));
-        // 用if判斷式來區分平日跟假日
-        if ($w == 0 || $w == 6) {
+     // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
+     foreach ($days as $day) {
+      // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
+      // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
+      // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
+      // 那format就是陣列中的日期部分
+      $format = explode("-", $day)[2];
+      // 再來是找每個日期是星期幾，就直接取陣列$day的時間戳
+      $w = date("w", strtotime($day));
+      $m = date("m", strtotime($day));
+
+
+      // 用if判斷式來區分平日跟假日
+      if ($month!=$m) {
+          echo "<div class='item otherday'>$format</div>";
+      } else if ($w == 0 || $w == 6) {
           echo "<div class='item holiday'>$format</div>";
-        } else {
+      } else {
           echo "<div class='item'>";
           echo "<div class='date'>$format</div>";
           echo "</div>";
-        }
+      }
 
 
 

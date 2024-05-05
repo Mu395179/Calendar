@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+body {
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    justify-content: center;
+    height: 100vh;
+    line-height: 1.5;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 99%);
+    background-size: 400%;
+    animation: bg-animation 8s infinite alternate;
+}
+
+@keyframes bg-animation {
+
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+
+}
+
+/* img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 50%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+
+} */
+
+row {
+    clear: both;
+}
+
+.container {
+    position: absolute;
+    width: 1500px;
+    height: 80vh;
+}
+
+.block-table {
+    position: relative;
+    display: inline-block;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    font-size: x-large;
+    /* color: rgba(255, 255, 255, .1); */
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0.04em 0.04em 0.08 white;
+    font-weight: 800;
+    margin-left: -1px;
+    margin-top: -1px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    /* color: white; */
+}
+
+.item-header {
+    -webkit-text-stroke: 1px goldenrod;
+    text-shadow: 0.04em 0.04em 0.08 goldenrod;
+    font-weight: 800;
+    margin-left: -1px;
+    margin-top: 100px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    color: white;
+
+}
+
+.holiday {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.otherday {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.specilday {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.box {
+    color: white;
+    z-index: 10;
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+    float: left;
+    padding: 100px;
+}
+
+.box a {
+    color: gold;
+    text-decoration: none;
+
+
+}
+
+.prev-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+
+}
+
+
+
+.next-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}

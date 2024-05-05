@@ -85,11 +85,11 @@
   <div class="box">
     <div class="row">
       <div class="prev-box">
-        <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>">PREV</a>
+        <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>">PREV</a>
       </div>
       <?= $year; ?>年 <?= $month; ?>月
       <div class="next-box">
-        <a href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>">NEXT</a>
+        <a href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>">NEXT</a>
       </div>
     </div>
   </div>

@@ -129,18 +129,16 @@ row {
     float: left;
     padding: 100px;
 }
-/* .box a{
-    color: gold;
-    text-decoration: none;
 
-
-} */
+.down{
+    transform: rotate(225deg); 
+}
 
 .prev-box a {
     position: absolute;
     height: 80px;
     width: 80px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-top: 15px solid goldenrod;
     border-left: 15px solid goldenrod;
     transform: rotate(45deg);
@@ -150,25 +148,45 @@ row {
 
 
 
-
 .prev-box {
     padding-top: 100px;
     padding-bottom: 150px;
-
-
-
 }
+
+.prev-box a:hover{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    margin-left: 35px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+    transform: rotate(45deg);
+    box-shadow: -10px -10px 10px goldenrod;
+}
+
 
 .next-box a{
     position: absolute;
-    margin-left: 35px;
+    margin-left: 30px;
     height: 80px;
     width: 80px;
     border-top: 15px solid goldenrod;
     border-left: 15px solid goldenrod;
+
     transform: rotate(225deg);
     opacity: 0.7;
 
+}
+
+.next-box a:hover{
+    position: absolute;
+    margin-left: 35px;
+    height: 90px;
+    width: 90px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+    transform: rotate(225deg);
+    box-shadow: -10px -10px 10px goldenrod;
 }
 
 .next-box {

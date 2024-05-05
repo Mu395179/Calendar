@@ -89,7 +89,7 @@
       </div>
       <?= $year; ?>年 <?= $month; ?>月
       <div class="next-box">
-        <a href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+        <a class="down"; href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
       </div>
     </div>
   </div>

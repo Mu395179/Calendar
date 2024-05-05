@@ -20,7 +20,7 @@
   // $month=(isset($_GET['month']))?$_GET['month']:date("m");
   // ??是isset判斷式的簡寫，所以此程式代表:
   // 此_GET陣列是否存在，如果存在那變數$month就會被賦予_GET陣列的值
-  // 如果不存在就會取此時此刻的月份來當作$month變數的值
+  // 如果不存在就會取此時此刻的月份來當作$month變數的值git
   $month = $_GET['month'] ?? date("m");
   // $year=(isset($_GET['year']))?$_GET['year']:date("Y");
   // $month = 4;
@@ -85,11 +85,11 @@
   <div class="box">
     <div class="row">
       <div class="prev-box">
-        <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>">PREV</a>
+        <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
       </div>
       <?= $year; ?>年 <?= $month; ?>月
       <div class="next-box">
-        <a href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>">NEXT</a>
+        <a href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
       </div>
     </div>
   </div>

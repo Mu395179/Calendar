@@ -15,19 +15,19 @@ body {
     height: 100vh;
     line-height: 1.5;
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 99%);
+    background:  linear-gradient(90deg, rgba(2,0,36,1) 21%, rgba(186,15,187,1) 50%, rgba(29,12,145,1) 75%);
     background-size: 400%;
-    animation: bg-animation 8s infinite alternate;
+    animation: bg-animation 20s infinite alternate;
 }
 
 @keyframes bg-animation {
 
     0% {
-        background-position: left;
+        background-position: top left;
     }
 
     50% {
-        background-position: right;
+        background-position: bottom right;
     }
 
 

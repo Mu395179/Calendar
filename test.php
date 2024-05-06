@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calendar</title>
-  <link rel="stylesheet" href="css_test.css">
+  <link rel="stylesheet" href="css_test1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
@@ -96,13 +96,13 @@
 
 
   <div class="block-table">
-    <div class="item-header">SUN</div>
-    <div class="item-header">MON</div>
-    <div class="item-header">TUE</div>
-    <div class="item-header">WED</div>
-    <div class="item-header">THU</div>
-    <div class="item-header">FRI</div>
-    <div class="item-header">SAT</div>
+    <div class="item header">SUN</div>
+    <div class="item header">MON</div>
+    <div class="item header">TUE</div>
+    <div class="item header">WED</div>
+    <div class="item header">THU</div>
+    <div class="item header">FRI</div>
+    <div class="item header">SAT</div>
     <?php
     // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
     foreach ($days as $day) {

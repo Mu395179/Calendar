@@ -113,8 +113,9 @@ body {
     margin-left: 35px;
     border-top: 15px solid goldenrod;
     border-left: 15px solid goldenrod;
-    transform: rotate(45deg);
-    box-shadow: -10px -10px 10px goldenrod;
+    transform: rotate(45deg) scale(1.3);
+    transition: all 0.3s;
+    opacity: 1;
 }
 
 .next-box a {
@@ -138,8 +139,9 @@ body {
     width: 90px;
     border-top: 15px solid goldenrod;
     border-left: 15px solid goldenrod;
-    transform: rotate(225deg);
-    box-shadow: -10px -10px 10px goldenrod;
+    transform: rotate(225deg) scale(1.3);
+    transition: all 0.3s;
+    opacity: 1;
 }
 
 .next-box {

@@ -5,103 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calendar</title>
-  <style>
-    body {
-      background-color: lightgoldenrodyellow;
-    }
-
-    row {
-      clear: both;
-    }
-
-    .container {
-      position: absolute;
-      width: 1340px;
-      height: 80vh;
-    }
-
-    .block-table {
-      float: left;
-      position: relative;
-      display: inline-block;
-      width: 380px;
-      display: flex;
-      flex-wrap: wrap;
-
-    }
-
-    .item {
-      background-color: white;
-      margin-left: -1px;
-      margin-top: -1px;
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border: 1px solid black;
-      position: relative;
-    }
-
-    .item-header {
-      margin-left: -1px;
-      margin-top: -1px;
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border: 1px solid yellow;
-      text-align: center;
-      background-color: black;
-      color: white;
-      font-weight: 800;
-
-    }
-
-    .holiday {
-      background: pink;
-    }
-
-    .otherday {
-      background: yellow;
-    }
-
-    .specilday {
-      background: lightgreen;
-    }
-
-    .box {
-      color: red;
-      text-align: center;
-      width: 1000px;
-
-    }
-
-
-    .prev-box {
-      display: inline-block;
-      width: 32.5%;
-      margin: 5px;
-      text-align: margin-left;
-    }
-
-    .next-box {
-      display: inline-block;
-      width: 32.5%;
-      margin: 5px;
-      text-align: margin-right;
-    }
-  </style>
-
-
-
+  <link rel="stylesheet" href="css_test1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <li><a href="test.php">測試</a></li>
+  <!-- <img src="https://img.freepik.com/premium-photo/wet-asphalt-reflection-abstract-dark-setting_957479-15394.jpg?w=996"
+    alt=""> -->
+
   <?php
   // 先設月份變數為_GET陣列，這樣之後做給值的網址就可以直接變成日期格式
   // $month=(isset($_GET['month']))?$_GET['month']:date("m");
   // ??是isset判斷式的簡寫，所以此程式代表:
   // 此_GET陣列是否存在，如果存在那變數$month就會被賦予_GET陣列的值
-  // 如果不存在就會取此時此刻的月份來當作$month變數的值
+  // 如果不存在就會取此時此刻的月份來當作$month變數的值git
   $month = $_GET['month'] ?? date("m");
   // $year=(isset($_GET['year']))?$_GET['year']:date("Y");
   // $month = 4;
@@ -164,64 +83,65 @@
 
 
   <div class="box">
-    <div class="prev-box">
-      <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>">上一個月</a>
-    </div>
-    <?= $year; ?>年 <?= $month; ?>月
-    <div class="next-box">
-      <a href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>">下一個月</a>
+    <div class="row">
+      <div class="prev-box">
+        <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+      </div>
+      <?= $year; ?>年 <?= $month; ?>月
+      <div class="next-box">
+        <a class="down" ; href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+      </div>
     </div>
   </div>
 
 
   <div class="block-table">
-    <div class="item-header">日</div>
-    <div class="item-header">一</div>
-    <div class="item-header">二</div>
-    <div class="item-header">三</div>
-    <div class="item-header">四</div>
-    <div class="item-header">五</div>
-    <div class="item-header">六</div>
+    <div class="item header">SUN</div>
+    <div class="item header">MON</div>
+    <div class="item header">TUE</div>
+    <div class="item header">WED</div>
+    <div class="item header">THU</div>
+    <div class="item header">FRI</div>
+    <div class="item header">SAT</div>
     <?php
+    $specary = [
+      "Y-5-1" => "勞動節",
+      "Y-5-12" => "護士節",
+      "Y-5-26" => "道歉節",
+    ];
+    $isspecary = false;
     // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
     foreach ($days as $day) {
       // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
       // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
       // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
       // 那format就是陣列中的日期部分
-      $format = explode("-", $day)[2];
-      // 再來是找每個日期是星期幾，就直接取陣列$day的時間戳
-      $w = date("w", strtotime($day));
-      // 這是用當天的時間戳找日期的月份，來跟當月比較
-    
-      $m = date("m", strtotime($day));
-      // 先用變數設定節日日期的時間戳
-      $specialDay = strtotime(date("Y-5-1"));
-      // 寫一個變數轉換當日的時間戳
-      $datesec = strtotime($day);
 
+      $formatmonth = explode("-", $day)[1];
+      $formatday = explode("-", $day)[2];
+      foreach ($specary as $spedate => $spedayname) {
+        $spemonth = explode("-", $spedate)[1];
+        $spemday = explode("-", $spedate)[2];
+        $m = date("m", strtotime($day));
 
+        if ($formatmonth == $spemonth && $formatday == $spemday) {
+          echo "<div class='item'>$formatday";
+          echo "<br>";
+          echo "$spedayname</div>";
+          $isspecary = true;
+        }
+      } 
+      if(!$isspecary){
+        if ($month != $m) {
+          echo "<div class='item'>$formatday</div>";}else{
+        echo "<div class='item'>$formatday</div>";}
 
-      // 如果節日時間戳等於當前日期就會另外標記
-      if ($specialDay == $datesec) {
-        echo "<div class='item specilday'>$format<span style='color:black'>勞工節</span></div>";
-
-        // 用當月月份與當日取月份做比較，如果不相等就另外標較
-      } else if ($month != $m) {
-        echo "<div class='item otherday'></div>";
-
-        // 用if判斷式來區分平日跟假日
-      } else if ($w == 0 || $w == 6) {
-        echo "<div class='item holiday'>$format</div>";
-      } else {
-        echo "<div class='item'>";
-        echo "<div class='date'>$format</div>";
-        echo "</div>";
-      }
-
-
-
+      } $isspecary = false;
     }
+
+
+
+
     ?>
   </div>
 

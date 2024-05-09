@@ -142,7 +142,6 @@
     ?>
   </div>
 
-  <?php include_once "./layouts/nav.php";?>
 
 
 

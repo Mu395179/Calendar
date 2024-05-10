@@ -5,9 +5,15 @@
 body {
     animation: bg-animation 20s infinite alternate;
     height: 100vh;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 21%, rgba(186, 15, 187, 1) 50%, rgba(29, 12, 145, 1) 75%);
-    background-size: 400%;
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 21%, rgba(186, 15, 187, 1) 50%, rgba(29, 12, 145, 1) 75%);
+    background-size: 400%; */
+    background-image: url(./img/2077.jpg);
     animation: bg-animation 20s infinite alternate;
+}
+
+body>img {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes bg-animation {
@@ -164,17 +170,19 @@ homebutton>a {
 }
 
 .monthname {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
     color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
-    font-size: 100px;
+    /* height: 50%; */
+    font-size: 70px;
     white-space: nowrap;
     overflow: hidden;
-    animation:
-        typing 1.5s steps(150)
+    animation: typing 1.5s steps(150)
 }
 
 @keyframes typing {

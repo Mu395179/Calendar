@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calendar</title>
-  <link rel="stylesheet" href="css_test1.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <a href="test.php">test</a>
   <!-- <img src="https://img.freepik.com/premium-photo/wet-asphalt-reflection-abstract-dark-setting_957479-15394.jpg?w=996"
     alt=""> -->
 
@@ -81,71 +82,89 @@
   ?>
   <!-- 用a link的方式給值給_GET陣列，並再由if判斷式做運算 -->
 
-
-  <div class="box">
+  <div class="container">
     <div class="row">
-      <div class="prev-box">
-        <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+      <div class="buttonbox">
+        <div class="prev-box">
+          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+        </div>
+        <div class="homebutton"><a href="index.php">home</a></div>
+        <div class="next-box">
+          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+        </div>
       </div>
-      <?= $year; ?>年 <?= $month; ?>月
-      <div class="next-box">
-        <a class="down" ; href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+      <div class="block-table">
+        <div class="item header">SUN</div>
+        <div class="item header">MON</div>
+        <div class="item header">TUE</div>
+        <div class="item header">WED</div>
+        <div class="item header">THU</div>
+        <div class="item header">FRI</div>
+        <div class="item header">SAT</div>
+        <?php
+        $specary = [
+          "Y-5-1" => "勞動節",
+          "Y-5-12" => "護士節",
+          "Y-5-26" => "道歉節",
+        ];
+        $isspecary = false;
+        // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
+        foreach ($days as $day) {
+          // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
+          // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
+          // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
+          // 那format就是陣列中的日期部分
+        
+          $formatmonth = explode("-", $day)[1];
+          $formatday = explode("-", $day)[2];
+          foreach ($specary as $spedate => $spedayname) {
+            $spemonth = explode("-", $spedate)[1];
+            $spemday = explode("-", $spedate)[2];
+            $m = date("m", strtotime($day));
+
+            if ($formatmonth == $spemonth && $formatday == $spemday) {
+              echo "<div class='item'>$formatday";
+              echo "<br>";
+              echo "$spedayname</div>";
+              $isspecary = true;
+            }
+          }
+          if (!$isspecary) {
+            if ($month != $m) {
+              echo "<div class='item'>$formatday</div>";
+            } else {
+              echo "<div class='item'>$formatday</div>";
+            }
+
+          }
+          $isspecary = false;
+        }
+        ?>
+        <?php
+        $monthname = [
+          "1" => "January",
+          "2" => "February",
+          "3" => "March",
+          "4" => "April",
+          "5" => "May",
+          "6" => "June",
+          "7" => "July",
+          "8" => "August",
+          "9" => "September",
+          "10" => "Octorber",
+          "11" => "November",
+          "12" => "December",
+        ];
+        $getMonth = $_GET['month'] ?? date("n");
+        ; ?>
+      </div>
+      <div class="textbox">
+        <div class="monthname"><?php echo $monthname[$getMonth]; ?></div>
+        <div class="monthtext"><?php echo $monthname[$getMonth]; ?></div>
       </div>
     </div>
   </div>
-
-
-  <div class="block-table">
-    <div class="item header">SUN</div>
-    <div class="item header">MON</div>
-    <div class="item header">TUE</div>
-    <div class="item header">WED</div>
-    <div class="item header">THU</div>
-    <div class="item header">FRI</div>
-    <div class="item header">SAT</div>
-    <?php
-    $specary = [
-      "Y-5-1" => "勞動節",
-      "Y-5-12" => "護士節",
-      "Y-5-26" => "道歉節",
-    ];
-    $isspecary = false;
-    // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
-    foreach ($days as $day) {
-      // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
-      // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
-      // explode("-",$day)[2]，代表炸開後取第三個索引那就是1
-      // 那format就是陣列中的日期部分
-
-      $formatmonth = explode("-", $day)[1];
-      $formatday = explode("-", $day)[2];
-      foreach ($specary as $spedate => $spedayname) {
-        $spemonth = explode("-", $spedate)[1];
-        $spemday = explode("-", $spedate)[2];
-        $m = date("m", strtotime($day));
-
-        if ($formatmonth == $spemonth && $formatday == $spemday) {
-          echo "<div class='item'>$formatday";
-          echo "<br>";
-          echo "$spedayname</div>";
-          $isspecary = true;
-        }
-      } 
-      if(!$isspecary){
-        if ($month != $m) {
-          echo "<div class='item'>$formatday</div>";}else{
-        echo "<div class='item'>$formatday</div>";}
-
-      } $isspecary = false;
-    }
-
-
-
-
-    ?>
   </div>
-
-
 
 
 

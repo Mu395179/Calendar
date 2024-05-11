@@ -142,7 +142,7 @@
           $isspecary = false;
         }
         ?>
-        <?php
+<?php
         $monthname = [
           "1" => "January",
           "2" => "February",
@@ -157,12 +157,38 @@
           "11" => "November",
           "12" => "December",
         ];
+        $getMonthtext = [
+          "January" => [],
+          "February" => [],
+          "March" => [],
+          "April" => [],
+          "May" => [
+            "勞動節" => "International Workers Day",
+            "護士節" => "International Nurses Day",
+            "道歉節" => "National Sorry Day",
+          ],
+          "June" => [],
+          "July" => [],
+          "August" => [],
+          "September" => [],
+          "October" => [],
+          "November" => [],
+          "December" => []
+        ];
         $getMonth = $_GET['month'] ?? date("n");
+        $getMonthName = $monthname[$getMonth] ?? date("n");
+        $getMonthText = $getMonthtext[$getMonthName] ?? [];
+
+
         ; ?>
       </div>
       <div class="textbox">
         <div class="monthname"><?php echo $monthname[$getMonth]; ?></div>
-        <div class="monthtext"><?php echo $monthname[$getMonth]; ?></div>
+        <div class="monthtext">
+          <?php 
+          foreach ($getMonthText as $key => $value) {
+            echo "$key: $value<br>";
+        } ?>
       </div>
     </div>
   </div>

@@ -177,10 +177,16 @@ homebutton>a {
     font-weight: 500;
     font-style: normal;
     color: hsl(323, 21%, 16%);
-    /* border: hsl(317, 100%, 54%) 4px solid; */
+    border: hsl(317, 100%, 54%) 2px solid;
+    background-color: hsl(323, 21%, 16%);
+    box-shadow: 0 0 10px white,
+    0 0 20px white,
+    0 0 40px white,
+    0 0 80px white,
+    0 0 160px white;
     text-decoration: none;
     /* text-shadow: 0 0 0.125em white; */
-    border-radius: 0.25em;
+    border-radius: 50% 50% 0% 0% ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,39 +195,66 @@ homebutton>a {
     font-size: 68px;
     white-space: nowrap;
     overflow: hidden;
-    animation: animate 2s linear infinite;
-    
+    animation: flash 2s linear infinite;
+
 }
-@keyframes animate 
-{   0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
-    {color: hsl(323, 21%, 16%);
-        text-shadow:none
+
+@keyframes flash {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: hsl(323, 21%, 16%);
+        text-shadow: none
     }
-    18.1%,20.1%,30%,50%,100%
-    {color: hsl(317, 100%, 54%);;
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    100% {
+        color: hsl(317, 100%, 54%);
+        ;
         text-shadow: 0 0 10px white,
-        0 0 20px white,
-        0 0 40px white,
-        0 0 80px white,
-        0 0 160px white;
+            0 0 20px white,
+            0 0 40px white,
+            0 0 80px white,
+            0 0 160px white;
     }
 }
-
-
 
 .monthtext {
-    display: flex;
+    text-align: start;
+    position: relative;
 
+    font-size: large;
+    line-height: 50px;
+    color: #fff;
     width: 100%;
-    height: 50%;
-    font-size: xx-large;
-    background-color: lightgreen;
-    color: red;
-    animation: typing 1.5s steps(150);
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 4px solid #fff; */
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
 }
 
-@keyframes typing {
-    from {
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
         width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+
     }
 }

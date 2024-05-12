@@ -234,7 +234,10 @@ homebutton>a {
     position: relative;
     width: 100%;
     height: 100%;
-
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     transition: 0.5s;
 
 }
@@ -298,15 +301,16 @@ homebutton>a {
     text-align: start;
     position: relative;
     font-size: large;
+    
     line-height: 50px;
     font-size: 1.5em;
-    color: #fff;
+    color: #00ff73;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     /* border-right: 4px solid #fff; */
     animation: animate 8s linear infinite;
-    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+    filter: drop-shadow(0 0 20px #00ff73) drop-shadow(0 0 50px #00ff73);
 }
 
 @keyframes animate {

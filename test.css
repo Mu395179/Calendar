@@ -232,7 +232,10 @@ homebutton>a {
 .monthtext {
     text-align: start;
     position: relative;
-
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     font-size: large;
     line-height: 50px;
     color: #fff;

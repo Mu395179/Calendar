@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -186,12 +189,12 @@
         <div class="monthname"><?php echo $monthname[$getMonth]; ?></div>
         <div class="monthtextbox">
           <span>
-          <div class="monthtext">
-            <?php
-            foreach ($getMonthText as $key => $value) {
-              echo "$key: $value<br>";
-            } ?>
-          </div>
+            <div class="monthtext">
+              <?php
+              foreach ($getMonthText as $key => $value) {
+                echo "$key: $value<br>";
+              } ?>
+            </div>
           </span>
         </div>
       </div>

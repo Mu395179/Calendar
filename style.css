@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    animation: bg-animation 20s infinite alternate;
+    height: 100vh;
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 21%, rgba(186, 15, 187, 1) 50%, rgba(29, 12, 145, 1) 75%);
+    background-size: 400%; */
+    background-image: url(./img/2077.jpg);
+    /* background-color: black; */
+    animation: bg-animation 20s infinite alternate;
+}
+
+body>img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bg-animation {
+
+    0% {
+        background-position: top left;
+    }
+
+    50% {
+        background-position: bottom right;
+    }
+
+
+}
+
+.container {
+    padding-top: 3%;
+    width: 100%;
+    height: 90vh;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttonbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 60px;
+    width: 12%;
+    height: 70vh;
+    background-color: lightgray;
+}
+
+.prev-box a {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin-left: 30px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+/* .prev-box {
+    padding-top: 100px;
+    padding-bottom: 150px;
+} */
+
+.prev-box a:hover {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    margin-left: 35px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+    transform: rotate(45deg) scale(1.3);
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+/* .next-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+} */
+
+.next-box a {
+    position: absolute;
+    margin-left: 30px;
+    height: 80px;
+    width: 80px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+
+    transform: rotate(225deg);
+    opacity: 0.7;
+
+
+}
+
+homebutton>a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+}
+
+.next-box a:hover {
+    position: absolute;
+    margin-left: 35px;
+    height: 90px;
+    width: 90px;
+    border-top: 15px solid goldenrod;
+    border-left: 15px solid goldenrod;
+    transform: rotate(225deg) scale(1.3);
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+.block-table {
+    position: relative;
+    display: inline-block;
+    width: 660px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2);
+    font-size: x-large;
+    margin-left: -1px;
+    margin-top: -1px;
+
+}
+
+.header {
+    -webkit-text-stroke: 1px goldenrod;
+    text-shadow: 0.04em 0.04em 0.08 goldenrod;
+    font-weight: 800;
+    margin-left: -1px;
+    margin-top: 25px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+    padding-left: 27px;
+    padding-top: 32px;
+
+}
+
+.textbox {
+
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .2); */
+    text-align: center;
+
+    width: 20%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: lightgreen; */
+}
+
+.monthname {
+    position: relative;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: hsl(323, 21%, 16%);
+    border: hsl(317, 100%, 54%) 2px solid;
+    background-color: hsl(323, 21%, 16%);
+    box-shadow: 0 0 10px white,
+        0 0 20px white,
+        0 0 40px white,
+        0 0 80px white,
+        0 0 160px white;
+    text-decoration: none;
+    /* text-shadow: 0 0 0.125em white; */
+    border-radius: 50% 50% 0% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 50%; */
+    font-size: 68px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: flash 2s linear infinite;
+
+}
+
+@keyframes flash {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: hsl(323, 21%, 16%);
+        text-shadow: none
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    100% {
+        color: hsl(317, 100%, 54%);
+        ;
+        text-shadow: 0 0 10px white,
+            0 0 20px white,
+            0 0 40px white,
+            0 0 80px white,
+            0 0 160px white;
+    }
+}
+
+.monthtextbox {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: 0.5s;
+
+}
+
+.monthtextbox:hover {
+    transform: translateY(-20px);
+}
+
+.monthtextbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #141e30, #2a6c56);
+    opacity: 0.5;
+}
+
+.monthtextbox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #141e30, #2a6c56);
+    filter: blur(30px);
+    opacity: 0.5;
+}
+
+.monthtextbox span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    /* width: 100%;
+    height: 100%; */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.monthtextbox span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+
+}
+
+
+
+
+
+
+.monthtext {
+    text-align: start;
+    position: relative;
+    font-size: large;
+    line-height: 50px;
+    font-size: 1.5em;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 4px solid #fff; */
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+
+    }
+}

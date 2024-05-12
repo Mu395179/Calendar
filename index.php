@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>calendar</title>
-  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap"
@@ -142,7 +142,7 @@
           $isspecary = false;
         }
         ?>
-<?php
+        <?php
         $monthname = [
           "1" => "January",
           "2" => "February",
@@ -184,14 +184,18 @@
       </div>
       <div class="textbox">
         <div class="monthname"><?php echo $monthname[$getMonth]; ?></div>
-        <div class="monthtext">
-          <?php 
-          foreach ($getMonthText as $key => $value) {
-            echo "$key: $value<br>";
-        } ?>
+        <div class="monthtextbox">
+          <span>
+          <div class="monthtext">
+            <?php
+            foreach ($getMonthText as $key => $value) {
+              echo "$key: $value<br>";
+            } ?>
+          </div>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
 

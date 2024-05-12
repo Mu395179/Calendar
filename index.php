@@ -86,7 +86,14 @@
   }
   ?>
   <!-- 用a link的方式給值給_GET陣列，並再由if判斷式做運算 -->
-
+<nav>
+  <div class="yearbox">
+  <span>2</span>
+  <span>0</span>
+  <span>2</span>
+  <span>4</span>
+  </div>
+</nav>
   <div class="container">
     <div class="row">
       <div class="buttonbox">

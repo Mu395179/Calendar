@@ -49,49 +49,34 @@
   // 當月總共有幾天，"t"是取時間戳的總天數
   $days = date("t", $firstDay);
   // 當月的最後一天變數時間戳
-  $lastDay = strtotime(date("Y-$month-$days"));
+  // $lastDay = strtotime(date("Y-$month-$days"));
   // echo "<br>";
   // 從最後一天的時間戳，取當天日期
   // echo "最後一天是" . date("Y-m-d", $lastDay);
   
 
   // 先設日期陣列，把迴圈所得的結果存入陣列，並應出來
-  $days = [];
+  $daysArray = [];
   // 要製作一個6*7的css box 需要42個值
   for ($i = 0; $i < 42; $i++) {
-    // 用迴圈的$i 與首周第一天的差值來訂定當月的日期
     $diff = $i - $firstWeekStarDay;
-    // 把上述差值來當作每月第一天的加值，所以如果有負的則會出現上個月的日期
-    // 同理，如果大於當月日期數，也會出現下個月的日期
-    $days[] = date("Y-m-d", strtotime("$diff days", $firstDay));
+    $currentDay = strtotime("$diff days", $firstDay);
+    $daysArray[] = date("Y-m-d", $currentDay);
   }
   // 如果在做月份的減值時，月份低於1就會回到上一年的12月
 // 不然就是月份-1 年份不變
-  if ($month - 1 < 1) {
-    $prev = 12;
-    $prev_year = $year - 1;
-  } else {
-    $prev = $month - 1;
-    $prev_year = $year;
-  }
-  // 如果在做月份的加值時，月份低於1就會到下一年的12月
-// 不然就是月份+1 年份不變
-  if ($month + 1 > 12) {
-    $next = 1;
-    $next_year = $year + 1;
+$prev = ($month - 1 < 1) ? 12 : $month - 1;
+$prev_year = ($month - 1 < 1) ? $year - 1 : $year;
 
-  } else {
-    $next = $month + 1;
-    $next_year = $year;
-  }
+$next = ($month + 1 > 12) ? 1 : $month + 1;
+$next_year = ($month + 1 > 12) ? $year + 1 : $year;
 
-  $only_prev_year = $year - 1;
-  $only_next_year = $year + 1;
+$only_prev_year = $year - 1;
+$only_next_year = $year + 1;
 
-  $year_digits_array = str_split($year);
-  $year_tens_digits = $year_digits_array[2] ?? '';
-  $year_digits = $year_digits_array[3] ?? '';
-
+$year_digits_array = str_split($year);
+$year_tens_digits=$year_digits_array[2] ?? '';
+$year_digits=$year_digits_array[3] ?? '';
 
   ?>
   <!-- 用a link的方式給值給_GET陣列，並再由if判斷式做運算 -->
@@ -99,25 +84,25 @@
     <div class="yearbox">
       <span>2</span>
       <span>0</span>
-      <span><?php echo $year_tens_digits; ?></span>
-      <span><?php echo $year_digits; ?></span>
+      <span><?php echo $year_tens_digits;?></span>
+      <span><?php echo $year_digits;?></span>
     </div>
   </nav>
   <div class="container">
     <div class="row">
       <div class="buttonbox">
         <div class="prev-box">
-          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
+          <a href="test.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
         </div>
         <div class="prev-box">
-          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+          <a href="test.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
         </div>
 
         <div class="next-box">
-          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+          <a ; href="test.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
         </div>
         <div class="next-box">
-          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
+          <a href="test.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
         </div>
       </div>
 
@@ -137,7 +122,7 @@
         ];
         $isspecary = false;
         // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
-        foreach ($days as $day) {
+        foreach ($daysArray as $day) {
           // 設定一個變數，把陣列所取出來的日期炸開並且取陣列中第二個位置
           // ex:陣列[2024-5-1]用explode("-",$day)炸開之後，會變成陣列[2024 5 1]
           // explode("-",$day)[2]，代表炸開後取第三個索引那就是1

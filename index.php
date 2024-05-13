@@ -105,21 +105,41 @@
   </nav>
   <div class="container">
     <div class="row">
-      <div class="buttonbox">
-        <div class="prev-box">
+      <div class="year-buttonbox">
+        <div class="year-prev-box">
           <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
         </div>
-        <div class="prev-box">
-          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+        <div class="year-prev-box">
+          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
         </div>
-
-        <div class="next-box">
-          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+       
+        <div class="year-next-box">
+          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
         </div>
-        <div class="next-box">
+        <div class="year-next-box">
           <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
         </div>
       </div>
+      <div class="month-buttonbox">
+       
+        <div class="month-prev-box">
+          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+        </div>
+
+        <div class="month-prev-box">
+          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+        </div>
+
+        <div class="month-next-box">
+          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+        </div>
+        <div class="month-next-box">
+          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+        </div>
+        
+      </div>
+
+
 
       <div class="block-table">
         <div class="item header">SUN</div>

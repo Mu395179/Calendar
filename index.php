@@ -41,7 +41,7 @@
   // echo $month . "月";
   // echo "<br>";
   // 先設當月第一天的時間戳變數
-  $firstDay = strtotime(date("Y-$month-1"));
+  $firstDay = strtotime(date("$year-$month-1"));
   // 設第一周的第一天
 // date(從時間戳取的參數"w"是星期幾,第一天的時間戳)
   $firstWeekStarDay = date("w", $firstDay);
@@ -159,7 +159,7 @@
           }
           if (!$isspecary) {
             if ($month != $m) {
-              echo "<div class='item'>$formatday</div>";
+              echo "<div class='item'></div>";
             } else {
               echo "<div class='item'>$formatday</div>";
             }

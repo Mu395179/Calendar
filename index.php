@@ -155,9 +155,16 @@
         <div class="item header-weeken">SAT</div>
         <?php
         $specary = [
-          "Y-5-1" => "勞動節",
-          "Y-5-12" => "護士節",
-          "Y-5-26" => "道歉節",
+          "Y-5-1" => "IWD",
+          "Y-5-12" => "IND",
+          "Y-5-18" => "ICOM",
+          "Y-5-26" => "NSD",
+          "Y-5-ˇ31" => "WNTD",
+          "Y-6-26" => "道歉節",
+          "Y-6-23" => "道歉節",
+          "Y-6-25" => "道歉節",
+          "Y-6-24" => "道歉節",
+
         ];
         $isspecary = false;
         // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
@@ -213,9 +220,11 @@
           "March" => [],
           "April" => [],
           "May" => [
-            "勞動節" => "International Workers Day",
-            "護士節" => "International Nurses Day",
-            "道歉節" => "National Sorry Day",
+            "IWD" => "International Workers Day",
+            "IND" => "International Nurses Day",
+            "ICOM" => "International Council of Museums",
+            "NSD" => "National Sorry Day",
+            "WNTD" => "World No Tobacco Day",
           ],
           "June" => [],
           "July" => [],

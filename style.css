@@ -8,7 +8,7 @@ body {
     /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 21%, rgba(186, 15, 187, 1) 50%, rgba(29, 12, 145, 1) 75%);
     background-size: 400%; */
     background-image: url(./img/bg01.jpg);
-    background-position: bottom -200px right -100px;
+    background-position: bottom -200px right 10px;
     background-size: cover;
     /* background-color: black; */
 
@@ -43,6 +43,7 @@ nav {
     font-weight: 600;
     font-style: normal;
     color: white;
+
     font-size: 120px;
     display: flex;
     justify-content: center;
@@ -58,14 +59,15 @@ nav {
 
     0%,
     100% {
-        color: #fff;
+        color: black;
         text-shadow: 0 0 12px lime, 0 0 50px lime, 0 0 100px lime;
     }
 
     10%,
     90% {
-        color: black;
+        color: #fff;
         text-shadow: none;
+        text-shadow: 0 0 12px rgb(0, 8, 0), 0 0 50px white, 0 0 100px white;
     }
 
 }
@@ -116,12 +118,12 @@ nav {
 
 .month-prev-box a {
     position: relative;
-    width: 60px;
-    height: 60px;
-    border-top: 15px solid #05D9FF;
-    border-left: 15px solid #05D9FF;
+    width: 40px;
+    height: 40px;
+    border-top: 15px solid #005678;
+    border-left: 15px solid #005678;
     transform: rotate(45deg);
-    filter: drop-shadow(0 0 20px #8FEEFF) drop-shadow(0 0 50px #8FEEFF);
+    filter: drop-shadow(0 0 10px #005678) drop-shadow(0 0 25px #005678);
     animation: prev 3s infinite;
 
 }
@@ -161,12 +163,12 @@ nav {
 
 .month-next-box a {
     position: relative;
-    width: 60px;
-    height: 60px;
-    border-top: 15px solid #05D9FF;
-    border-left: 15px solid #05D9FF;
+    width: 40px;
+    height: 40px;
+    border-top: 15px solid #005678;
+    border-left: 15px solid #005678;
     transform: rotate(225deg);
-    filter: drop-shadow(0 0 20px #8FEEFF) drop-shadow(0 0 50px #8FEEFF);
+    filter: drop-shadow(0 0 10px #005678) drop-shadow(0 0 25px #005678);
     animation: next 3s infinite;
 
 }
@@ -208,7 +210,7 @@ nav {
 
 .year-buttonbox a {
     margin: auto;
-    margin-right: 70px;
+    margin-right: 60px;
     position: relative;
     display: flex;
     align-items: center;
@@ -220,12 +222,12 @@ nav {
 .year-prev-box a {
     position: relative;
     margin-bottom: 30px;
-    width: 80px;
-    height: 80px;
-    border-top: 15px solid #ff1646;
-    border-left: 15px solid #ff1646;
+    width: 50px;
+    height: 50px;
+    border-top: 15px solid #cb0c59;
+    border-left: 15px solid #cb0c59;
     transform: rotate(45deg);
-    filter: drop-shadow(0 0 20px #ff7894) drop-shadow(0 0 50px #ff7894);
+    filter: drop-shadow(0 0 20px #cb0c59) drop-shadow(0 0 50px #cb0c59);
     animation: prev 4s infinite;
 
 }
@@ -251,12 +253,12 @@ nav {
 .year-next-box a {
     margin-top: 30px;
     position: relative;
-    width: 80px;
-    height: 80px;
-    border-top: 15px solid #ff1646;
-    border-left: 15px solid #ff1646;
+    width: 50px;
+    height: 50px;
+    border-top: 15px solid #cb0c59;
+    border-left: 15px solid #cb0c59;
     transform: rotate(225deg);
-    filter: drop-shadow(0 0 20px #ff7894) drop-shadow(0 0 50px #ff7894);
+    filter: drop-shadow(0 0 10px #cb0c59) drop-shadow(0 0 2px #cb0c59);
     animation: next 4s infinite;
 
 }
@@ -309,10 +311,10 @@ nav {
     background-color: #0f0f0f;
     border: 1px solid #22a0b6;
     inset: 1px;
-    box-shadow: 0 0 10px #22a0b6;
+    box-shadow: 0 0 30px #03E9F4;
     transition: all 0.3s ease;
-    color: #cb0c59;
-    opacity: 0.6;
+    color: #03E9F4;
+    opacity: 0.7;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -322,39 +324,47 @@ nav {
 
 .item:hover {
     transform: scale(1.1);
-    color: #d1f7ff;
-    filter: drop-shadow(0 0 20px #d1f7ff) drop-shadow(0 0 50px #d1f7ff);
-    border-color: #d1f7ff;
+    color: #03E9F4;
+    filter: drop-shadow(0 0 20px #03E9F4) drop-shadow(0 0 50px #03E9F4);
+    border-color: #03E9F4;
 
-    box-shadow: 0 0 15px #d1f7ff;
+    box-shadow: 0 0 15px #03E9F4;
 
 }
 
 .header {
-    color: #f57371;
+    border: 1px solid #ff5bf8;
+    color: #ff5bf8;
     font-size: 2em;
     padding-top: 20px;
+    opacity: 0.8;
 }
 
 .header:hover {
-    color: #f57371;
-    filter: drop-shadow(0 0 20px #f57371) drop-shadow(0 0 50px #f57371);
+    border: 1px solid #ff5bf8;
+    color: #ff5bf8;
+    filter: drop-shadow(0 0 20px #ff5bf8) drop-shadow(0 0 50px #ff5bf8);
+    opacity: 0.8;
 }
 
 .header-weeken {
-    color: #feff6e;
+    border: 1px solid #FCEE09;
+    color: #FCEE09;
 
     font-size: 2em;
     padding-top: 20px;
 }
 
 .header-weeken:hover {
-    color: #feff6e;
-    filter: drop-shadow(0 0 20px #feff6e) drop-shadow(0 0 50px #feff6e);
+    border: 1px solid #FCEE09;
+    color: #FCEE09;
+    filter: drop-shadow(0 0 20px #FCEE09) drop-shadow(0 0 50px #FCEE09);
+    opacity: 0.9;
 }
 
 .special {
-    color: #ff2b2b;
+    border: 2px solid #00ff73;
+    color: #00ff73;
 }
 
 .special:hover {
@@ -387,10 +397,10 @@ nav {
     border: hsl(317, 100%, 54%) 2px solid;
     background-color: hsl(323, 21%, 16%);
     box-shadow: 0 0 10px white,
+        0 0 10px white,
         0 0 20px white,
         0 0 40px white,
-        0 0 80px white,
-        0 0 160px white;
+        0 0 80px white;
     text-decoration: none;
     /* text-shadow: 0 0 0.125em white; */
     border-radius: 50% 50% 0% 0%;
@@ -516,7 +526,7 @@ nav {
     white-space: nowrap;
     /* border-right: 4px solid #fff; */
     animation: animate 8s linear infinite;
-    filter: drop-shadow(0 0 20px #00ff73) drop-shadow(0 0 50px #00ff73);
+    filter: drop-shadow(0 0 10px #00ff73) drop-shadow(0 0 25px #00ff73);
 }
 
 @keyframes animate {

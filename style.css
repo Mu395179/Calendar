@@ -7,17 +7,20 @@ body {
     height: 100vh;
     /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 21%, rgba(186, 15, 187, 1) 50%, rgba(29, 12, 145, 1) 75%);
     background-size: 400%; */
-    background-image: url(./img/2077.jpg);
+    background-image: url(./img/bg01.jpg);
+    background-position: bottom -200px right -100px;
+    background-size: cover;
     /* background-color: black; */
+
     animation: bg-animation 20s infinite alternate;
 }
 
-body>img {
+/* body>img {
     width: 100%;
     height: 100%;
-}
+} */
 
-@keyframes bg-animation {
+/* @keyframes bg-animation {
 
     0% {
         background-position: top left;
@@ -28,7 +31,7 @@ body>img {
     }
 
 
-}
+} */
 
 nav {
     margin-top: 20px;
@@ -309,7 +312,7 @@ nav {
     box-shadow: 0 0 10px #22a0b6;
     transition: all 0.3s ease;
     color: #cb0c59;
-    opacity: 0.8;
+    opacity: 0.6;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;

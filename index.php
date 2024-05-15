@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -112,7 +116,7 @@
         <div class="year-prev-box">
           <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
         </div>
-       
+
         <div class="year-next-box">
           <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
         </div>
@@ -121,7 +125,7 @@
         </div>
       </div>
       <div class="month-buttonbox">
-       
+
         <div class="month-prev-box">
           <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
         </div>
@@ -136,19 +140,19 @@
         <div class="month-next-box">
           <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
         </div>
-        
+
       </div>
 
 
 
       <div class="block-table">
-        <div class="item header">SUN</div>
+        <div class="item header-weeken">SUN</div>
         <div class="item header">MON</div>
         <div class="item header">TUE</div>
         <div class="item header">WED</div>
         <div class="item header">THU</div>
         <div class="item header">FRI</div>
-        <div class="item header">SAT</div>
+        <div class="item header-weeken">SAT</div>
         <?php
         $specary = [
           "Y-5-1" => "勞動節",
@@ -171,7 +175,7 @@
             $m = date("m", strtotime($day));
 
             if ($formatmonth == $spemonth && $formatday == $spemday) {
-              echo "<div class='item'>$formatday";
+              echo "<div class='item special'>$formatday";
               echo "<br>";
               echo "$spedayname</div>";
               $isspecary = true;

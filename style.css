@@ -100,7 +100,7 @@ nav {
 }
 
 
-.month-buttonbox a{
+.month-buttonbox a {
 
     margin-right: 40px;
     position: relative;
@@ -111,7 +111,7 @@ nav {
 
 }
 
-.month-prev-box a{
+.month-prev-box a {
     position: relative;
     width: 60px;
     height: 60px;
@@ -155,7 +155,8 @@ nav {
     }
 
 }
-.month-next-box a{
+
+.month-next-box a {
     position: relative;
     width: 60px;
     height: 60px;
@@ -202,7 +203,7 @@ nav {
 
 
 
-.year-buttonbox a{
+.year-buttonbox a {
     margin: auto;
     margin-right: 70px;
     position: relative;
@@ -213,7 +214,7 @@ nav {
 
 }
 
-.year-prev-box a{
+.year-prev-box a {
     position: relative;
     margin-bottom: 30px;
     width: 80px;
@@ -244,7 +245,7 @@ nav {
 }
 
 
-.year-next-box a{
+.year-next-box a {
     margin-top: 30px;
     position: relative;
     width: 80px;
@@ -288,7 +289,7 @@ nav {
 
 }
 
-.item {
+/* .item {
     width: 90px;
     height: 90px;
     background-color: rgba(255, 255, 255, .1);
@@ -297,19 +298,66 @@ nav {
     margin-left: -1px;
     margin-top: -1px;
 
+} */
+
+.item {
+    width: 90px;
+    height: 90px;
+    background-color: #0f0f0f;
+    border: 1px solid #22a0b6;
+    inset: 1px;
+    box-shadow: 0 0 10px #22a0b6;
+    transition: all 0.3s ease;
+    color: #cb0c59;
+    opacity: 0.8;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    color: #d1f7ff;
+    filter: drop-shadow(0 0 20px #d1f7ff) drop-shadow(0 0 50px #d1f7ff);
+    border-color: #d1f7ff;
+
+    box-shadow: 0 0 15px #d1f7ff;
+
 }
 
 .header {
-    -webkit-text-stroke: 1px goldenrod;
-    text-shadow: 0.04em 0.04em 0.08 goldenrod;
-    font-weight: 800;
-    margin-left: -1px;
-    margin-top: 25px;
-    display: inline-block;
-    backdrop-filter: blur(5px);
-    padding-left: 27px;
-    padding-top: 32px;
+    color: #f57371;
+    font-size: 2em;
+    padding-top: 20px;
+}
 
+.header:hover {
+    color: #f57371;
+    filter: drop-shadow(0 0 20px #f57371) drop-shadow(0 0 50px #f57371);
+}
+
+.header-weeken {
+    color: #feff6e;
+
+    font-size: 2em;
+    padding-top: 20px;
+}
+
+.header-weeken:hover {
+    color: #feff6e;
+    filter: drop-shadow(0 0 20px #feff6e) drop-shadow(0 0 50px #feff6e);
+}
+
+.special {
+    color: #ff2b2b;
+}
+
+.special:hover {
+    color: #00ff73;
+    filter: drop-shadow(0 0 20px #00ff73) drop-shadow(0 0 50px #00ff73);
+    box-shadow: 0 0 15px #00ff73;
 }
 
 .textbox {
@@ -457,7 +505,6 @@ nav {
     text-align: start;
     position: relative;
     font-size: large;
-
     line-height: 50px;
     font-size: 1.5em;
     color: #00ff73;

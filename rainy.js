@@ -4,7 +4,7 @@ window.onload = function () {
 
     function createRaindrops() {
         for (let i = 0; i < 1000; i++) {
-            setTimeout(createRaindrop, i * 100);
+            setTimeout(createRaindrop, i * 500);
         }
     }
 

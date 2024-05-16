@@ -17,11 +17,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #222;
+    }
+
+    .raindrop {
+      position: absolute;
+      width: 3px;
+      height: 30px;
+      background-color: gray;
+      opacity: 0.1;
+      opacity: 0.6;
+
+    }
+  </style>
 
 </head>
 
 <body>
   <a href="test.php">test</a>
+  <script src="rainy.js"></script>
   <!-- <img src="https://img.freepik.com/premium-photo/wet-asphalt-reflection-abstract-dark-setting_957479-15394.jpg?w=996"
     alt=""> -->
 

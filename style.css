@@ -120,6 +120,7 @@ nav {
     position: relative;
     width: 40px;
     height: 40px;
+    margin-bottom: 30px;
     border-top: 15px solid #005678;
     border-left: 15px solid #005678;
     transform: rotate(45deg);
@@ -161,10 +162,15 @@ nav {
 
 }
 
+a {
+    text-decoration: none;
+}
+
 .month-next-box a {
     position: relative;
     width: 40px;
     height: 40px;
+    margin-top: 30px;
     border-top: 15px solid #005678;
     border-left: 15px solid #005678;
     transform: rotate(225deg);
@@ -309,11 +315,11 @@ nav {
     width: 90px;
     height: 90px;
     background-color: #0f0f0f;
-    border: 1px solid #22a0b6;
+    border: 1px solid rgb(0, 255, 255);
     inset: 1px;
-    box-shadow: 0 0 30px #03E9F4;
+    box-shadow: 0 0 30px rgb(0, 255, 255);
     transition: all 0.3s ease;
-    color: #03E9F4;
+    color: rgb(0, 255, 255);
     opacity: 0.7;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
@@ -333,44 +339,44 @@ nav {
 }
 
 .header {
-    border: 1px solid #ff5bf8;
-    color: #ff5bf8;
+    border: 1px solid white;
+    color: white;
     font-size: 2em;
     padding-top: 20px;
     opacity: 0.8;
 }
 
 .header:hover {
-    border: 1px solid #ff5bf8;
-    color: #ff5bf8;
-    filter: drop-shadow(0 0 20px #ff5bf8) drop-shadow(0 0 50px #ff5bf8);
+    border: 1px solid white;
+    color: white;
+    filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
     opacity: 0.8;
 }
 
 .header-weeken {
-    border: 1px solid #FCEE09;
-    color: #FCEE09;
+    border: 1px solid rgb(255, 0, 255);
+    color: rgb(255, 0, 255);
 
     font-size: 2em;
     padding-top: 20px;
 }
 
 .header-weeken:hover {
-    border: 1px solid #FCEE09;
-    color: #FCEE09;
-    filter: drop-shadow(0 0 20px #FCEE09) drop-shadow(0 0 50px #FCEE09);
+    border: 1px solid rgb(255, 0, 255);
+    color: rgb(255, 0, 255);
+    filter: drop-shadow(0 0 20px rgb(255, 0, 255)) drop-shadow(0 0 50px rgb(255, 0, 255));
     opacity: 0.9;
 }
 
 .special {
-    border: 2px solid #00ff73;
-    color: #00ff73;
+    border: 2px solid white;
+    color: white;
 }
 
 .special:hover {
-    color: #00ff73;
-    filter: drop-shadow(0 0 20px #00ff73) drop-shadow(0 0 50px #00ff73);
-    box-shadow: 0 0 15px #00ff73;
+    color: white;
+    filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
+    box-shadow: 0 0 15px white;
 }
 
 .textbox {
@@ -394,7 +400,7 @@ nav {
     font-weight: 500;
     font-style: normal;
     color: hsl(323, 21%, 16%);
-    border: hsl(317, 100%, 54%) 2px solid;
+    border: rgb(255, 0, 255) 2px solid;
     background-color: hsl(323, 21%, 16%);
     box-shadow: 0 0 10px white,
         0 0 10px white,
@@ -436,7 +442,7 @@ nav {
     30%,
     50%,
     100% {
-        color: hsl(317, 100%, 54%);
+        color: rgb(255, 0, 255);
         ;
         text-shadow: 0 0 10px white,
             0 0 20px white,
@@ -520,13 +526,13 @@ nav {
     font-size: large;
     line-height: 50px;
     font-size: 1.5em;
-    color: #00ff73;
+    color: white;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     /* border-right: 4px solid #fff; */
     animation: animate 8s linear infinite;
-    filter: drop-shadow(0 0 10px #00ff73) drop-shadow(0 0 25px #00ff73);
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
 }
 
 @keyframes animate {

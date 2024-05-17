@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
     body {
       margin: 0;
@@ -32,6 +34,43 @@
       opacity: 0.1;
       opacity: 0.6;
 
+    }
+
+    .material-symbols-outlined {
+      padding-right: 20px;
+
+      text-shadow:
+        /* 0 0 2.5px white,
+        0 0 5px white,
+        0 0 10px white, */
+        0 0 1px rgb(255, 0, 255),
+        0 0 1px rgb(255, 0, 255),
+        0 0 1px rgb(255, 0, 255),
+        0 0 1px rgb(255, 0, 255);
+      font-size: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, filter 0.3s;
+
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
+    .material-symbols-outlined:hover {
+      text-shadow:
+        /* 0 0 2.5px white,
+        0 0 5px white,
+        0 0 10px white, */
+        0 0 3px rgb(255, 0, 255),
+        0 0 5px rgb(255, 0, 255),
+        0 0 10px rgb(255, 0, 255),
+        0 0 20px rgb(255, 0, 255);
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 50px rgb(255, 0, 255));
     }
   </style>
 
@@ -135,6 +174,7 @@
           <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
         </div>
 
+        </a>
         <div class="year-next-box">
           <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
         </div>
@@ -151,7 +191,10 @@
         <div class="month-prev-box">
           <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
         </div>
-
+        <a href="index.php"><span class="material-symbols-outlined">
+            today
+          </span>
+        </a>
         <div class="month-next-box">
           <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
         </div>

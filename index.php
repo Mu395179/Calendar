@@ -168,38 +168,39 @@
     <div class="row">
       <div class="year-buttonbox">
         <div class="year-prev-box">
-          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
+
+          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>" title="prev year"></a>
         </div>
         <div class="year-prev-box">
-          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>"></a>
+          <a href="index.php?year=<?= $only_prev_year; ?>&month=<?= $month; ?>" title="prev year"></a>
         </div>
 
         </a>
         <div class="year-next-box">
-          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
+          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>" title="next year"></a>
         </div>
         <div class="year-next-box">
-          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>"></a>
+          <a href="index.php?year=<?= $only_next_year; ?>&month=<?= $month; ?>" title="next year"></a>
         </div>
       </div>
       <div class="month-buttonbox">
 
         <div class="month-prev-box">
-          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>" title="prev month"></a>
         </div>
 
         <div class="month-prev-box">
-          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>"></a>
+          <a href="index.php?year=<?= $prev_year; ?>&month=<?= $prev; ?>" title="prev month"></a>
         </div>
-        <a href="index.php"><span class="material-symbols-outlined">
+        <a href="index.php" title="today"><span class="material-symbols-outlined">
             today
           </span>
         </a>
         <div class="month-next-box">
-          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>" title="next month"></a>
         </div>
         <div class="month-next-box">
-          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>"></a>
+          <a ; href="index.php?year=<?= $next_year; ?>&month=<?= $next; ?>" title="next month"></a>
         </div>
 
       </div>

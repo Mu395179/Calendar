@@ -121,10 +121,10 @@ nav {
     width: 40px;
     height: 40px;
     margin-bottom: 30px;
-    border-top: 15px solid #005678;
-    border-left: 15px solid #005678;
+    border-top: 15px solid rgb(0, 255, 255);
+    border-left: 15px solid rgb(0, 255, 255);
     transform: rotate(45deg);
-    filter: drop-shadow(0 0 10px #005678) drop-shadow(0 0 25px #005678);
+    filter: drop-shadow(0 0 5px rgb(0, 255, 255)) drop-shadow(0 0 5px rgb(0, 255, 255));
     animation: prev 3s infinite;
 
 }
@@ -171,10 +171,10 @@ a {
     width: 40px;
     height: 40px;
     margin-top: 30px;
-    border-top: 15px solid #005678;
-    border-left: 15px solid #005678;
+    border-top: 15px solid rgb(0, 255, 255);
+    border-left: 15px solid rgb(0, 255, 255);
     transform: rotate(225deg);
-    filter: drop-shadow(0 0 10px #005678) drop-shadow(0 0 25px #005678);
+    filter: drop-shadow(0 0 5px rgb(0, 255, 255)) drop-shadow(0 0 5px rgb(0, 255, 255));
     animation: next 3s infinite;
 
 }
@@ -230,10 +230,10 @@ a {
     margin-bottom: 30px;
     width: 50px;
     height: 50px;
-    border-top: 15px solid #cb0c59;
-    border-left: 15px solid #cb0c59;
+    border-top: 15px solid rgb(255, 0, 255);
+    border-left: 15px solid rgb(255, 0, 255);
     transform: rotate(45deg);
-    filter: drop-shadow(0 0 20px #cb0c59) drop-shadow(0 0 50px #cb0c59);
+    filter: drop-shadow(0 0 5px rgb(255, 0, 255)) drop-shadow(0 0 5px rgb(255, 0, 255));
     animation: prev 4s infinite;
 
 }
@@ -261,10 +261,10 @@ a {
     position: relative;
     width: 50px;
     height: 50px;
-    border-top: 15px solid #cb0c59;
-    border-left: 15px solid #cb0c59;
+    border-top: 15px solid rgb(255, 0, 255);
+    border-left: 15px solid rgb(255, 0, 255);
     transform: rotate(225deg);
-    filter: drop-shadow(0 0 10px #cb0c59) drop-shadow(0 0 2px #cb0c59);
+    filter: drop-shadow(0 0 5px rgb(255, 0, 255)) drop-shadow(0 0 5px rgb(255, 0, 255));
     animation: next 4s infinite;
 
 }

@@ -217,16 +217,35 @@
         <div class="item header-weeken">SAT</div>
         <?php
         $specary = [
+          "Y-1-15" => "MLKD",
+          "Y-2-28" => "228",
+          "Y-3-8" => "IWD",
+          "Y-3-14" => "Pi Day",
+          "Y-4-1" => "AFD",
+          "Y-4-2" => "WAAD",
           "Y-5-1" => "IWD",
           "Y-5-12" => "IND",
           "Y-5-18" => "ICOM",
           "Y-5-26" => "NSD",
           "Y-5-ˇ31" => "WNTD",
-          "Y-6-26" => "道歉節",
-          "Y-6-23" => "道歉節",
-          "Y-6-25" => "道歉節",
-          "Y-6-24" => "道歉節",
-
+          "Y-6-1" => "ICD",
+          "Y-6-5" => "WED",
+          "Y-6-14" => "WBDD",
+          "Y-7-7" => "WCD",
+          "Y-7-27" => "MMBD",
+          "Y-8-1" => "IDIP",
+          "Y-8-13" => "ILHD",
+          "Y-9-10" => "TSD",
+          "Y-9-21" => "IDP",
+          "Y-10-4" => "DAD",
+          "Y-10-14" => "WSD",
+          "Y-10-16" => "DFD",
+          "Y-10-17" => "IDEP",
+          "Y-10-23" => "MBD",
+          "Y-11-20" => "TDoR",
+          "Y-11-25" => "WVD",
+          "Y-12-10" => "IBHR",
+          "Y-12-25" => "Xmas",
         ];
         $isspecary = false;
         // 把在迴圈得出來的陣列值用foreach 的方式製作出div box 並在box內印出日期
@@ -277,24 +296,61 @@
           "12" => "December",
         ];
         $getMonthtext = [
-          "January" => [],
-          "February" => [],
-          "March" => [],
-          "April" => [],
+          "January" => [
+            "MLKD" => "Martin Luther King, Jr. Day",
+          ],
+          "February" => [
+            "228" => "Peace Memorial Day",
+          ],
+          "March" => [
+            "IWD" => "Pi Day",
+            "Pi Day" => "Pi Day",
+          ],
+          "April" => [
+            "AFD" => "April Fool's Day",
+            "WAAD" => "World Autism Awareness Day",
+          ],
           "May" => [
             "IWD" => "International Workers Day",
             "IND" => "International Nurses Day",
             "ICOM" => "International Council of Museums",
             "NSD" => "National Sorry Day",
             "WNTD" => "World No Tobacco Day",
+
           ],
-          "June" => [],
-          "July" => [],
-          "August" => [],
-          "September" => [],
-          "October" => [],
-          "November" => [],
-          "December" => []
+          "June" => [
+            "ICD" => "International Children's Day",
+            "WED" => "World Environment Day",
+            "WBDD" => "World Blood Donor Day",
+          ],
+          "July" => [
+            "WCD" => "World Chocolate Day",
+            "MMBD" => "My Mom's Birthday",
+
+          ],
+          "August" => [
+            "IDIP" => "International Day of the Indigenous People",
+            "ILHD" => "International Left-Handers Day",
+          ],
+          "September" => [
+            "IDP" => "International Day of Peace",
+            "TSD" => "Teacher's Day",
+          ],
+          "Octorber" => [
+            "DAD" => "World Animal Day",
+            "WSD" => "World Standards Day",
+            "DFD" => "World Food Day",
+            "IDEP" => "International Day for the Eradication of Poverty",
+            "MBD" => "My Birthday",
+          ],
+          "November" => [
+            "TDoR" => "Transgender Day of Remembrance",
+            "WVD" => "World Vegetarian Day",
+          ],
+          "December" => [
+            "IBHR" => "International Bill of Human Rights",
+            "Xmas" => "Christmas",
+          ]
         ];
         $getMonth = $_GET['month'] ?? date("n");
         $getMonthName = $monthname[$getMonth] ?? date("n");

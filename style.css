@@ -378,6 +378,19 @@ a {
     filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
     box-shadow: 0 0 15px white;
 }
+.other {
+   opacity: 0.3;
+}
+
+.other:hover {
+    opacity: 0.3;
+    transform: scale(1.1);
+    color: #03E9F4;
+    filter: drop-shadow(0 0 20px #03E9F4) drop-shadow(0 0 50px #03E9F4);
+    border-color: #03E9F4;
+
+    box-shadow: 0 0 15px #03E9F4;
+}
 
 .textbox {
 

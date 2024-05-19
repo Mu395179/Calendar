@@ -34,6 +34,7 @@
       opacity: 0.1;
       opacity: 0.6;
 
+
     }
 
     .material-symbols-outlined {
@@ -271,7 +272,7 @@
           }
           if (!$isspecary) {
             if ($month != $m) {
-              echo "<div class='item'></div>";
+              echo "<div class='item other'>$formatday</div>";
             } else {
               echo "<div class='item'>$formatday</div>";
             }

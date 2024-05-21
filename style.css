@@ -378,8 +378,9 @@ a {
     filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
     box-shadow: 0 0 15px white;
 }
+
 .other {
-   opacity: 0.3;
+    opacity: 0.3;
 }
 
 .other:hover {
@@ -527,11 +528,6 @@ a {
 
 
 }
-
-
-
-
-
 
 .monthtext {
     text-align: start;

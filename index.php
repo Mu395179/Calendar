@@ -367,6 +367,7 @@
             <div class="monthtext">
               <?php
               foreach ($getMonthText as $key => $value) {
+                echo "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;";
                 echo "$key: $value<br>";
               } ?>
             </div>

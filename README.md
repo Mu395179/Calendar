@@ -11,7 +11,7 @@
 ## 萬年曆畫面
 
 ### 首頁
-![萬年曆](./img/Calendar.jpg)
+![萬年曆](./img/Calendar.JPG)
 
 
 ## 使用
